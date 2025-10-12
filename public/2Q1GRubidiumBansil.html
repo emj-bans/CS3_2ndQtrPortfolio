@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<head>
+  <title>Rubidium Thursday Schedule - Rb02 | Bansil</title>
+  <meta name="description" content="A website of the Thursday schedule of the Grade 9 section Rubidium B2029 in PSHS-M.">
+  <meta name="author" content="Rb02 - Emmanuel Jr. Bansil">
+  <link rel="stylesheet" href="2Q1GCSS.css">
+  <link rel="icon" href="assets/BlueStar.png">
+</head>
+
+<div class="centered">
+  <img src="assets/BlueGradientStar.webp" style="margin:-63px;width:130px;position:relative;top:200px;left:210px;">
+  <img src="assets/BlueGradientStar.webp" style="margin:-63px;width:130px;position:relative;top:760px;left:-160px;transform:rotate(230deg);">
+  <img src="assets/BlueStar.png" style="margin:-33px;width:100px;position:relative;top:70px;left:-170px;transform:rotate(200deg);">
+  <div>
+    <img src="assets/ChromeLine.webp" style="width:400px;padding:20px;margin-bottom:-25px;">
+    <img src="assets/ChromeLine.webp" style="width:400px;padding:20px;margin-bottom:-25px;margin-left: -44px;">
+  </div>
+
+  <div class="blobheader">
+    <h1> Rubidium Thursday Schedule </h1>
+    <h2> by: Emmanuel Jr. R. Bansil </h2>
+  </div>
+  <table border="2">
+    <tr>
+      <th>
+        <p class="tableheader">Time</p>
+      </th>
+      <th>
+        <p class="tableheader">Subject</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata"> 7:30 - 8:15 </p>
+      </td>
+      <td>
+        <p class="tabledata"> Statistics
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata"> 8:15 - 9:00 </p>
+      </td>
+      <td>
+        <p class="tabledata"> Study Period </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata"> 9:00 - 9:10 </p>
+      </td>
+      <td>
+        <p class="tabledata">Break</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">9:10 - 9:55</p>
+      </td>
+      <td rowspan="2">
+        <p class="tabledata">Biology</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">9:55 - 10:40</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">10:40 - 11:25</p>
+      </td>
+      <td>
+        <p class="tabledata">Filipino</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">11:25 - 12:10</p>
+      </td>
+      <td>
+        <p class="tabledata">ValEd</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">12:10 - 12:20</p>
+      </td>
+      <td>
+        <p class="tabledata">Break</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">12:20 - 1:05</p>
+      </td>
+      <td>
+        <p class="tabledata">Lunch</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">1:05-1:50</p>
+      </td>
+      <td>
+        <p class="tabledata">Chemistry</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">1:50-2:35</p>
+      </td>
+      <td>
+        <p class="tabledata">Study Period</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">2:35-2:45</p>
+      </td>
+      <td>
+        <p class="tabledata">Break</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">2:45-3:30</p>
+      </td>
+      <td rowspan="2">
+        <p class="tabledata">PhysEd</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="tabledata">3:30-4:15</p>
+      </td>
+    </tr>
+  </table>
+  <div>
+    <input onclick="showImage()" type="button" value="Show Image" id="imageText" style="margin:20px;font-size:20px;"></input>
+    <input onclick="showVideo()" type="button" value="Show Video" id="videoText" style="margin:20px;font-size:20px;"></input>
+  </div>
+  <div width="600" class="centered">
+    <img class="showImage" id="image" src="assets/MegamindPhoto.jpg" width="250" style="display: none;margin-bottom: 10px;"></img>
+    <iframe class="showVideo" id="video" style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/xvudCN6B2FE?si=qr_doNFMdyyUY_J1&amp;start=66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p style="font-family: 'TT Octosquares Condensed Italic'; color:white;display: none;" class="showVideo" id="textBelow">The original music video can't be placed in here so the karaoke is here for replacement instead :(</p>
+  </div>
+   
+  <div>
+    <img src="assets/ChromeLine.webp" style="width:400px;padding:20px;margin-bottom:-25px;">
+    <img src="assets/ChromeLine.webp" style="width:400px;padding:20px;margin-bottom:-25px;margin-left: -44px;">
+  </div>
+  <script>
+        function showImage() {
+            var img = document.getElementById("image");
+            
+            var imgtext = document.getElementById("imageText");
+            if (imgtext.value=="Show Image") {
+                imgtext.value = "Hide Image";
+                img.style.display = "block";
+            } else {
+                imgtext.value = "Show Image";
+                img.style.display = "none";
+            }
+        }
+        function showVideo() {
+            var vid = document.getElementById("video");
+            var vidtextBelow = document.getElementById("textBelow");
+            var vidtext = document.getElementById("videoText");
+            if (vidtext.value=="Show Video") {
+                vidtext.value = "Hide Video";
+                vid.style.display = "block";
+                vidtextBelow.style.display = "block";
+            } else {
+                vidtext.value = "Show Video";
+                vid.style.display = "none";
+                vidtextBelow.style.display = "none";
+            }
+        }
+    </script>
+</div>

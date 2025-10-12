@@ -1,0 +1,94 @@
+body{
+    background-image: url("assets/BlueBackgroundSalitan1.png");
+    margin:0;
+    background-size: 1200px;
+}
+@font-face {
+    font-family: "Straczynski Italic";
+    src: url('assets/Straczynski Italic.ttf');
+}
+@font-face {
+    font-family: "TT Octosquares Condensed Italic";
+    src: url('assets/TT Octosquares Trial Condensed Italic.ttf');
+}
+h1{
+    font-family: "Straczynski Italic";
+    color:aliceblue;
+    text-shadow:
+        -2px -2px 0 black, 
+        2px -2px 0 black,  
+        -2px 2px 0 black,   
+        2px 2px 0 black;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    font-size:40px;
+}
+.centered{
+    display: grid;
+    text-align:center;
+    place-items: center;
+}
+h2{
+    font-family: "Straczynski Italic";
+    color:aliceblue;
+    text-shadow:
+        -2px -2px 0 black, 
+        2px -2px 0 black,  
+        -2px 2px 0 black,   
+        2px 2px 0 black;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+.tableheader{
+    font-family: "Straczynski Italic";
+    margin:5px;
+    color:aliceblue;
+    letter-spacing: 2px;
+    text-shadow:
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,   
+        1px 1px 0 black;
+    font-size: 20px;
+}
+.tabledata{
+    font-family: "TT Octosquares Condensed Italic";
+    color:aliceblue;
+    letter-spacing: 1px;
+    text-shadow:
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,   
+        1px 1px 0 black;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-size: 20px;
+}
+.blobheader{
+    background-image: url('assets/BlueBlobHeaderBackground.png');
+    background-size:60%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width:800px;
+    height:169px;
+}
+table {
+  border-color: #8eb7e2;
+}
+h3:hover{
+    cursor:pointer;
+}
+input{
+    font-family: "TT Octosquares Condensed Italic";
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border-width:1px;
+    border-color:white;
+    cursor:pointer;
+    overflow: hidden;   
+    color:aliceblue;     
+}
