@@ -92,3 +92,38 @@ input{
     overflow: hidden;   
     color:aliceblue;     
 }
+.navigation{
+    text-align: center;
+    color: #534539;
+    font-family: 'TT Octosquares Condensed Italic';
+    width: 600px;
+    margin: auto; 
+    background-image: url('assets/BlueBlobHeaderBackground.png');
+    background-size: 60%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+a:link{
+    color:aliceblue;
+    text-shadow:
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,   
+        1px 1px 0 black;
+}
+a:visited{
+    color: white;
+    text-shadow:
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,   
+        1px 1px 0 black;
+}
+a:hover{
+    color: gray;
+    text-shadow:
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,   
+        1px 1px 0 black;
+}
