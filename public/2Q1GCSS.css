@@ -127,3 +127,10 @@ a:hover{
         -1px 1px 0 black,   
         1px 1px 0 black;
 }
+.essay{
+    border-width: 5px;
+    border-style: double none none none;
+    border-color: #8eb7e2;
+    width:900px;
+    margin-bottom: 30px;
+}

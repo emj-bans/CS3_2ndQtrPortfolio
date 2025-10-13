@@ -8,30 +8,35 @@
 </head>
 
 <div class="centered">
+  <!-- Nav Bar -->
   <h2 style="margin-bottom:-6px;">Navigation Bar</h2>
-    <nav class="navigation">
-      <ul>
-        <a href="https://sammr123a.github.io/CS_2NDQTRPORTFOLIO/public/2Q1GRubidiumAustria.html" style="margin-left: -40px;">Monday Schedule | Sam </a><br>
-        <a href="https://shekinahmarcel.github.io/CS3_1stQtrPortfolio/public/Quarter%202/sched.html" style="margin-left: -40px;">Tuesday Schedule | Shek </a><br>
-        <a href="../index.html" style="margin-left: -40px;">Friday Schedule | Zirjan </a><br>
-      </ul>
-    </nav>
-  
+  <nav class="navigation">
+    <ul>
+      <a href="https://sammr123a.github.io/CS_2NDQTRPORTFOLIO/public/2Q1GRubidiumAustria.html" style="margin-left: -40px;">Monday Schedule | Sam </a><br>
+      <a href="https://shekinahmarcel.github.io/CS3_1stQtrPortfolio/public/Quarter%202/sched.html" style="margin-left: -40px;">Tuesday Schedule | Shek </a><br>
+      <a href="../index.html" style="margin-left: -40px;">Friday Schedule | Zirjan </a><br>
+    </ul>
+  </nav>
 
+  <!-- Star Decor -->
   <img src="assets/BlueGradientStar.webp" style="margin:-63px;width:130px;position:relative;top:200px;left:250px;">
   <img src="assets/BlueGradientStar.webp" style="margin:-63px;width:130px;position:relative;top:760px;left:-300px;transform:rotate(230deg);">
   <img src="assets/BlueStar.png" style="margin:-33px;width:100px;position:relative;top:70px;left:-170px;transform:rotate(200deg);">
+  
 
-
+  <!-- Chrome Line -->
   <div>
     <img src="assets/ChromeLine.webp" style="width:400px;padding:20px;margin-bottom:-25px;">
     <img src="assets/ChromeLine.webp" style="width:400px;padding:20px;margin-bottom:-25px;margin-left: -44px;">
   </div>
 
+  <!-- Title and Subtitle Blob -->
   <div class="blobheader">
     <h1> Rubidium Thursday Schedule </h1>
     <h2> by: Emmanuel Jr. R. Bansil </h2>
   </div>
+
+  <!-- Schedule Table -->
   <table border="2">
     <tr>
       <th>
@@ -178,20 +183,38 @@
       </td>
     </tr>
   </table>
-  <div>
-    <input onclick="showImage()" type="button" value="Show Image" id="imageText" style="margin:20px;font-size:20px;"></input>
-    <input onclick="showVideo()" type="button" value="Show Video" id="videoText" style="margin:20px;font-size:20px;"></input>
-  </div>
-  <div width="600" class="centered">
-    <img class="showImage" id="image" src="assets/MegamindPhoto.jpg" width="250" style="display: none;margin-bottom: 10px;"></img>
-    <iframe class="showVideo" id="video" style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/xvudCN6B2FE?si=qr_doNFMdyyUY_J1&amp;start=66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p style="font-family: 'TT Octosquares Condensed Italic'; color:white;display: none;" class="showVideo" id="textBelow">The original music video can't be placed in here so the karaoke is here for replacement instead :(</p>
-  </div>
-   
+
+  <!-- Content Section -->
+  <section>
+    <div>
+      <input onclick="showImage()" type="button" value="Show Image" id="imageText" style="margin:20px;font-size:20px;"></input>
+      <input onclick="showVideo()" type="button" value="Show Video" id="videoText" style="margin:20px;font-size:20px;"></input>
+    </div>
+
+    <div width="600" class="centered">
+      <img class="showImage" id="image" src="assets/MegamindPhoto.jpg" width="250" style="display: none;margin-bottom: 10px;"></img>
+      <iframe class="showVideo" id="video" style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/xvudCN6B2FE?si=qr_doNFMdyyUY_J1&amp;start=66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p style="font-family: 'TT Octosquares Condensed Italic'; color:white;display: none;" class="showVideo" id="textBelow">The original music video can't be placed in here so the karaoke is here for replacement instead :(</p>
+    </div>
+
+    <h2 style="margin-bottom:-2px;margin-left:10px;text-align: left;">Why Thursday's a Good Day</h2>
+    <div class="essay">
+      <img src="assets/BlueGradientStar.webp" style="margin:-63px;width:130px;position:relative;top:250px;left:460px;transform:rotate(60deg);">
+      <img src="assets/BlueStar.png" style="margin:-33px;width:100px;position:relative;top:130px;left:-410px;transform:rotate(10deg);">
+
+      <p class="tabledata">Thursday is a good day since it's the day before Friday, which means the weekend is just around the corner. You've already gotten through the worst part of the week by Thursday and can begin to unwind. You've likely completed most of your work, so there's less anxiety. It's a breather before the weekend, and you can begin thinking about fun activities for tomorrow. </p>
+      <p></p>
+      <p class="tabledata">Another thing Thursday is awesome at is that it's an all-right day to socialize. Most people organize happy hours or just spend time with friends after class. You're not exhausted yet, so you still have some energy to have fun. Also, it's less tense than Monday or Wednesday, so you can manage to remain efficient and creative.</p>
+    </div>
+  </section>
+  
+   <!-- Chrome Line -->
   <div>
     <img src="assets/ChromeLine.webp" style="width:400px;padding:20px;margin-bottom:-25px;">
     <img src="assets/ChromeLine.webp" style="width:400px;padding:20px;margin-bottom:-25px;margin-left: -44px;">
   </div>
+
+  <!-- JavaScript Button Code -->
   <script>
         function showImage() {
             var img = document.getElementById("image");
@@ -220,4 +243,5 @@
             }
         }
     </script>
+
 </div>
