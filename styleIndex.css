@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Windows 95 FontStyle";
+    src: url('public/assets/W95font.otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Windows 95 FontStyle";
+    src: url('public/assets/W95font-Bold.otf');
+    font-weight: bold;
+}
+.windowsmedia{
+  background-image: url('https://i.pinimg.com/564x/50/57/d5/5057d558db91dde981e0bbd3432b3346.jpg');
+  height: 332px;
+  width:312px;
+  filter: grayscale(100%);
+}
