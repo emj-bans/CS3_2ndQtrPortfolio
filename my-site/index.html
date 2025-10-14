@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Encoding + mobile responsiveness -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page info -->
+  <title>My Website</title>
+  <meta name="description" content="A simple Grade 9 template with favicon, meta tags, navigation, and footer.">
+  <meta name="author" content="Emmanuel Jr. R. Bansil">
+
+  <!-- Stylesheet -->
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <a class="brand" href="index.html">My Site</a>
+            <ul class="nav-list">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <!-- Future: <li><a href="about.html">About</a></li> -->
+                <!-- Future: <li><a href="projects.html">Projects</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <footer>
+        <ul class="social-list">
+            <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://your-username.github.io" target="_blank" rel="noopener noreferrer">GitHub Pages</a></li>
+            <li><a href="https://facebook.com/your-username" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://instagram.com/your-username" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://x.com/your-username" target="_blank" rel="noopener noreferrer">X</a></li>
+        </ul>
+    </footer>
+
+    <p class="copyright">
+        &copy; <span id="year"></span> Student Name. All rights reserved.
+    </p>
+
+    <script>
+        // Auto-set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
