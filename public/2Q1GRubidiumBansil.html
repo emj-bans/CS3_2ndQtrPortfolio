@@ -220,8 +220,8 @@
 
     <footer>
       <h2>Resources:</h2>
-      <p class="tabledata">
-        © 2025 <a href="../index.html">Emmanuel Jr. Bansil</a>. All Rights Reserved.
+      <p class="tabledata copyright">
+        &copy; <span id="year"></span> <a href="../index.html">Emmanuel Jr. Bansil</a>. All Rights Reserved.
       </p>
       <p></p>
       <p class="tabledata" style="font-size:13px;">
@@ -255,6 +255,8 @@
 
     <!-- JavaScript Button Code -->
     <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
       function showImage() {
         var img = document.getElementById("image");
             
@@ -267,6 +269,7 @@
           img.style.display = "none";
         }
       }
+
       function showVideo() {
         var vid = document.getElementById("video");
         var vidtextBelow = document.getElementById("textBelow");
