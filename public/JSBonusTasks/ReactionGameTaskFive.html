@@ -1,0 +1,32 @@
+<body>
+    <p id="randomLetter">Press the B key to start!</p>
+    <p id="correctOrWrong"></p>
+    <p id="score">Score: 0</p>
+    <script>
+        function getRandomLowercaseLetter() {
+            const alphabet = "abcdefghijklmnopqrstuvwxyz";
+            const randomIndex = Math.floor(Math.random() * alphabet.length);
+            return alphabet.charAt(randomIndex);
+        }
+
+        var textarea = document.getElementById("randomLetter");
+        var CorW = document.getElementById("correctOrWrong");
+        var score = document.getElementById("score");
+
+        document.body.onkeypress = anyKeyPress;
+        let randomLetter = 'b';
+        var numberScore = 0;
+        function anyKeyPress(){
+            if (randomLetter == event.key) {
+                CorW.innerText = "✅ Correct!"
+                randomLetter = getRandomLowercaseLetter();
+                numberScore += 1;
+                score.innerText = `Score: ${numberScore}`;
+            } else {
+                CorW.innerText = "❌ Try again!"
+            }
+            
+            textarea.innerText = randomLetter;
+        }
+    </script>
+</body>

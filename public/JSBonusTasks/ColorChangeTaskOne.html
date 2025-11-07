@@ -1,0 +1,21 @@
+<body>
+  <h1>Click anywhere!</h1>
+  <script>
+    document.body.onclick = changeColor
+
+    function generateRandomRgbColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function changeColor() {
+        let randomColor = generateRandomRgbColor();
+      document.body.style.backgroundColor = randomColor;
+    }
+  </script>
+</body>
+
+<!-- The code for the function generateRandomRgbColor() is not mine! I got help from sitepoint.com -->
+<!-- Sam Deering. (29, Feb. 2024). Generating Random Color Values using JavaScript. https://www.sitepoint.com/generating-random-color-values/ -->

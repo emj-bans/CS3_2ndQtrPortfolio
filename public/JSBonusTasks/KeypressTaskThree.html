@@ -1,0 +1,14 @@
+<body>
+  <h2>Press any key</h2>
+  Refresh page to reset
+  <h2>Key Pressed:</h2>
+  <p id="keypress" value=" "></p>
+  <script>
+    const textarea = document.getElementById("keypress");
+    document.body.onkeypress = changeColorPress;
+    function changeColorPress(){
+        document.body.style.backgroundColor = "royalblue";
+        textarea.innerText = event.key;
+    }
+  </script>
+</body>

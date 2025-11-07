@@ -1,0 +1,38 @@
+<body>
+    <input onclick="changeText()" type="button" value="Hello World!" id="helloText" style="margin:20px;font-size:20px;"></input>
+    <div id="box" style="width:100px; height:100px; background:red;">I'm a box!</div>
+    <p>Press the B key!</p>
+    <p id="keypress" value=" "></p>
+
+    <script>
+        function changeText() {
+            var helloText = document.getElementById("helloText");
+            if (helloText.value=="Hello World!") {
+                helloText.value = "The world says hi!";
+            } else {
+                helloText.value = "Hello World!";
+            }
+        }
+
+        const box = document.getElementById("box");
+        box.onmouseover = rotateBox;
+
+        function rotateBox() {
+            box.style.transform = "rotate(230deg)";
+        }
+
+        box.onmouseout = resetBox;
+  
+        function resetBox() {
+            box.style.transform = "rotate(0deg)";
+        } 
+
+        const textarea = document.getElementById("keypress");
+        document.body.onkeypress = showMessage;
+        function showMessage(){
+            if (event.key == 'b' || event.key == 'B') {
+                textarea.innerText = 'You pressed the B key! B is for Beautiful!';
+            }
+        }
+    </script>
+</body>
