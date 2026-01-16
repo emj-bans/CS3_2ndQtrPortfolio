@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HTML Form Sign-up!</title>
+
+  <meta name="description" content="A website of a form sign-up.">
+  <meta name="author" content="Rb02 - Emmanuel Jr. Bansil">
+
+
+  <link rel="icon" href="assets/DoraFavicon.png">
+</head>
+
+<body>
+    <h1> Sign up now! </h1>
+
+    <form>
+        <label for="studentID">Student ID:</label><br>
+        <input type="number" id="studentID" name="studentID"><br>
+
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName"><br>
+        
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday" name="birthday"><br>
+        
+        <label for="email">Email address:</label><br>
+        <input type="email" id="email" name="email"><br>
+        
+        <label for="mPhoneNumber">Mobile phone number:</label><br>
+        <input type="tel" id="mPhoneNumber" name="mPhoneNumber" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"><br>
+        
+        <label for="gradeLvl">Grade Level:</label><br>
+        <select id="gradeLvl" name="gradeLvl" required>
+            <option value="">--Please choose an option--</option>
+            <option value="gr1">Grade 1</option>
+            <option value="gr2">Grade 2</option>
+            <option value="gr3">Grade 3</option>
+            <option value="gr4">Grade 4</option>
+            <option value="gr5">Grade 5</option>
+            <option value="gr6">Grade 6</option>
+            <option value="gr7">Grade 7</option>
+            <option value="gr8">Grade 8</option>
+            <option value="gr9">Grade 9</option>
+            <option value="gr10">Grade 10</option>
+            <option value="gr11">Grade 11</option>
+            <option value="gr12">Grade 12</option>
+        </select><br>
+        
+        <label for="internExtern">Intern or Extern?:</label><br>
+        <input type="radio" id="intern" name="internExtern" value="intern">
+        <label for="intern">Intern</label><br>
+        <input type="radio" id="extern" name="internExtern" value="extern">
+        <label for="extern">Extern</label><br>
+        
+        <label for="club">Preferred Club:</label><br>
+        <select id="club" name="club" required>
+            <option value="">--Please choose an option--</option>
+            <option value="sca">SCA</option>
+            <option value="allianti">Allianti</option>
+            <option value="munhwa">Munhwa</option>
+            <option value="mathclub">Math Club</option>
+            <option value="invictus">Invictus</option>
+        </select><br>
+        
+        <label for="reason">Why do you want to join?: </label></br>
+        <textarea id="tArea" name="reason" rows="4" cols="50"> </textarea><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
