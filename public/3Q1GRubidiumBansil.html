@@ -9,26 +9,108 @@
 
 
   <link rel="icon" href="assets/DoraFavicon.png">
+
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        form {
+            width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        select {width: 100%;}
+
+        /* Focus style */
+        input:focus, select:focus, textarea:focus {
+            border: 2px solid #4CAF50;
+            outline: none;
+            background-color: #f0fff4;
+        }
+
+        /* Style for invalid / empty fields */
+        .error {
+            border: 2px solid red;
+            background-color: #ffecec;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: 48%;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            border: none;
+        }
+    </style>
+
+    <script>
+        function confirmSubmit() {
+            return confirm("Are you sure you want to submit the form?");
+        }
+
+        function confirmReset() {
+            return confirm("Are you sure you want to reset all fields?");
+        }
+
+        function checkEmpty(field) {
+            if (field.value.trim() === "") {
+                field.classList.add("error");
+            } else {
+                field.classList.remove("error");
+            }
+        }
+    </script>
 </head>
 
 <body>
     <h1> Sign up now! </h1>
 
-    <form>
+    <form method="post" action="submit" onsubmit="return confirmSubmit()" onreset="return confirmReset()">
         <label for="studentID">Student ID:</label><br>
-        <input type="number" id="studentID" name="studentID"><br>
+        <input type="number" id="studentID" name="studentID" required><br>
 
         <label for="fullName">Full Name:</label><br>
-        <input type="text" id="fullName" name="fullName"><br>
+        <input type="text" id="fullName" name="fullName" required><br>
         
         <label for="birthday">Birthday:</label><br>
-        <input type="date" id="birthday" name="birthday"><br>
+        <input type="date" id="birthday" name="birthday" required><br>
         
         <label for="email">Email address:</label><br>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" required><br>
         
         <label for="mPhoneNumber">Mobile phone number:</label><br>
-        <input type="tel" id="mPhoneNumber" name="mPhoneNumber" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"><br>
+        <input type="tel" id="mPhoneNumber" name="mPhoneNumber" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" required><br>
         
         <label for="gradeLvl">Grade Level:</label><br>
         <select id="gradeLvl" name="gradeLvl" required>
@@ -48,9 +130,9 @@
         </select><br>
         
         <label for="internExtern">Intern or Extern?:</label><br>
-        <input type="radio" id="intern" name="internExtern" value="intern">
+        <input type="radio" id="intern" name="internExtern" value="intern" required>
         <label for="intern">Intern</label><br>
-        <input type="radio" id="extern" name="internExtern" value="extern">
+        <input type="radio" id="extern" name="internExtern" value="extern" required>
         <label for="extern">Extern</label><br>
         
         <label for="club">Preferred Club:</label><br>
@@ -64,7 +146,7 @@
         </select><br>
         
         <label for="reason">Why do you want to join?: </label></br>
-        <textarea id="tArea" name="reason" rows="4" cols="50"> </textarea><br><br>
+        <textarea id="tArea" name="reason" rows="4" cols="50" required> </textarea><br><br>
 
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
