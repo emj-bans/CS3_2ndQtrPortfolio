@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>View Signups</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+    }
+
+    table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: white;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .controls {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+</style>
+
+<script>
+    let allSignups = [];
+
+    function loadSignups() {
+        allSignups = JSON.parse(localStorage.getItem("signups")) || [];
+        displayTable(allSignups);
+    }
+
+    function displayTable(data) {
+        let tbody = document.getElementById("tableBody");
+        tbody.innerHTML = "";
+
+        data.forEach(s => {
+            let row = `
+                <tr>
+                    <td>${s.studentID}</td>
+                    <td>${s.fullName}</td>
+                    <td>${s.grade}</td>
+                    <td>${s.status}</td>
+                    <td>${s.club}</td>
+                </tr>
+            `;
+            tbody.innerHTML += row;
+        });
+
+        document.getElementById("total").textContent = data.length;
+    }
+
+    function filterClub() {
+        let club = document.getElementById("clubFilter").value;
+
+        if (club === "All") {
+            displayTable(allSignups);
+        } else {
+            let filtered = allSignups.filter(s => s.club === club);
+            displayTable(filtered);
+        }
+    }
+
+    window.onload = loadSignups;
+</script>
+</head>
+
+<body>
+
+<div class="controls">
+    <h2>Student Signups</h2>
+
+    <label>Filter by Club:</label>
+    <select id="clubFilter" onchange="filterClub()">
+        <option value="All">All</option>
+        <option>SCA</option>
+        <option>Allianti</option>
+        <option>Munhwa</option>
+        <option>Math Club</option>
+        <option>Invictus</option>
+    </select>
+
+    <p>Total Sign-ups: <strong id="total">0</strong></p>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Full Name</th>
+            <th>Grade</th>
+            <th>Status</th>
+            <th>Club</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+</body>
+</html>

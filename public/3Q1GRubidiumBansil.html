@@ -90,13 +90,50 @@
                 field.classList.remove("error");
             }
         }
+
+        function saveSignup(event) {
+        event.preventDefault();
+
+        if (!confirm("Do you want to submit this signup?")) {
+            return;
+        }
+
+        let signup = {
+            studentID: document.getElementById("studentID").value,
+            fullName: document.getElementById("fullName").value,
+            birthday: document.getElementById("birthday").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("mPhoneNumber").value,
+            grade: document.getElementById("gradeLvl").value,
+            status: document.querySelector("input[name='internExtern']:checked").value,
+            club: document.getElementById("club").value,
+            reason: document.getElementById("tArea").value
+        };
+
+        let signups = JSON.parse(localStorage.getItem("signups"));
+
+        if (!signups) {
+            signups = [];
+        }
+
+        signups.push(signup);
+        localStorage.setItem("signups", JSON.stringify(signups));
+
+        alert("Signup saved successfully!");
+        document.getElementById("signupForm").reset();
+    }
+
+    function goToView() {
+        window.location.href = "viewSignUps.html";
+    }
+
     </script>
 </head>
 
 <body>
     <h1> Sign up now! </h1>
 
-    <form method="post" action="submit" onsubmit="return confirmSubmit()" onreset="return confirmReset()">
+    <form method="post" onsubmit="return saveSignup(event)" onreset="return confirmReset()">
         <label for="studentID">Student ID:</label><br>
         <input type="number" id="studentID" name="studentID" required><br>
 
@@ -150,5 +187,6 @@
 
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
+        <button type="button" onclick="goToView()">View Signups</button>
     </form>
 </body>
