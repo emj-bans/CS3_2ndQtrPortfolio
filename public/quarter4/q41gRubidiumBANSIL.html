@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Q4 1st Graded - Movie Rating</title>
+
+  <meta name="description" content="Movie Rating 1st Graded.">
+  <meta name="author" content="Rb02 - Emmanuel Jr. Bansil">
+
+  <link rel="stylesheet" href="q41gRubidiumBANSIL.css">
+</head>
+
+<body>
+    <div style="padding:10px 30px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);width:30%;margin: auto;">
+        <h1 style="font-family: sans-serif;text-align: center;">
+            Add a Movie
+        </h1>
+        <form>
+            <label> <p style="font-family: sans-serif;"> <b> Title: </b> </p> </label>
+            <input type="text" style="width: 100%;" id="movieTitle"> </input>
+
+            <label> <p style="font-family: sans-serif;"> <b> Year: </b> </p> </label>
+            <input type="text" style="width: 100%;" id="movieYear"> </input>
+
+            <label> <p style="font-family: sans-serif;"> <b> Genre: </b> </p> </label>
+            <select id="movieGenre" style="width: 100%;" >
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Horror">Horror</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Romance">Romance</option>
+                <option value="Thriller">Thriller</option>
+            </select>
+
+            <label> <p style="font-family: sans-serif;"> <b> Rating: </b> </p> </label>
+            <span onclick="gfg(1)" class="star">★</span>
+            <span onclick="gfg(2)" class="star">★</span>
+            <span onclick="gfg(3)" class="star">★</span>
+            <span onclick="gfg(4)" class="star">★</span>
+            <span onclick="gfg(5)" class="star">★</span>
+
+            <input type="submit" style="width:100%;" value="Add Movie">
+        </form>
+        <h1 style="font-family: sans-serif;text-align: center;">
+            Movie List
+        </h1>
+        <div id="listMovies" style="font-family: sans-serif;"> </div>
+    </div>
+
+    <script src="q41gRubidiumBANSIL.js"></script>
+</body>
