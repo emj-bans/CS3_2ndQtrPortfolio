@@ -3,7 +3,6 @@ let stars =
 
 let rate = 0
 
-// Funtion to update rating
 function gfg(n) {
     remove();
     for (let i = 0; i < n; i++) {
@@ -16,7 +15,7 @@ function gfg(n) {
     }
     rate = n
 }
-// To remove the pre-applied styling
+
 function remove() {
     let i = 0;
     while (i < 5) {
