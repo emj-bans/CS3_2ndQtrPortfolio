@@ -33,12 +33,24 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    movieList.push({
-        title: movieTitle.value,
-        year: movieYear.value,
-        genre: movieGenre.value,
-        rating: rate
-    });
+    let exists = false;
+
+    for (let i=0; i<movieList.length; i++) {
+        if (movieList[i].title.toLowerCase() == movieTitle.value.toLowerCase()) {
+            movieList[i].rating = Math.round((Number(movieList[i].rating) + rate) / 2);
+            exists = true;
+            break;
+        }
+    }
+
+    if (!exists) {
+        movieList.push({
+            title: movieTitle.value,
+            year: movieYear.value,
+            genre: movieGenre.value,
+            rating: rate
+        });
+    }
 
     localStorage.setItem("savedMovieList", JSON.stringify(movieList)); 
     displayMovies(movieList);
@@ -56,8 +68,19 @@ function displayMovies(movieList) {
             idx++;
         }
 
-        displayList += `<div class="movie">${movieList[m].title} (${movieList[m].year}) - ${movieList[m].genre}, Rating: ${stars}</div>`;
+        displayList += `<div class="movie">${movieList[m].title} (${movieList[m].year}) - ${movieList[m].genre}, Rating: ${stars} <button id="deleteMovie" onclick="delMovie()"> Delete </button> </div>`;
     }
 
     listMovies.innerHTML = displayList;
+}
+
+function delMovie(idx) {
+    let delConfirm = confirm("Are you sure you want to delete?")
+    if (delConfirm) {
+        movieList.splice(idx, 1);
+        localStorage.setItem("savedMovieList", JSON.stringify(movieList)); 
+        displayMovies(movieList);
+    } else {
+        alert("Deletion cancelled.")
+    }
 }
