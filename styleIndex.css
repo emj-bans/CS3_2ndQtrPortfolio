@@ -8,6 +8,10 @@
     src: url('public/assets/W95font-Bold.otf');
     font-weight: bold;
 }
+@font-face {
+    font-family: "Dos";
+    src: url('public/assets/Px437_DOS-V_re_ANK24.woff2');
+}
 .windowsmedia{
   background-image: url('https://i.pinimg.com/564x/50/57/d5/5057d558db91dde981e0bbd3432b3346.jpg');
   height: 332px;
@@ -15,5 +19,6 @@
   filter: grayscale(100%);
 }
 p{
-    font-family: 'Windows 95 FontStyle';
+    font-family: 'Dos';
+    letter-spacing: -0.5px;
 }
